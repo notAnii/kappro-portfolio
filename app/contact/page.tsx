@@ -45,7 +45,7 @@ const Contact = (props: Props) => {
             <Image
               className=""
               src="/assets/images/dev/contact.png"
-              alt="Portfolio Image"
+              alt="Contact Image"
               width={653}
               height={962}
             />

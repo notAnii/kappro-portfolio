@@ -33,7 +33,7 @@ const About = (props: Props) => {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Molestias voluptates itaque, deleniti ad minima ducimus.
                     </p>
-                    <Link href="/" className="btn">View my work</Link>
+                    <Link href="/portfolio" className="btn">View my work</Link>
                 </div>
             </div>
         </div>

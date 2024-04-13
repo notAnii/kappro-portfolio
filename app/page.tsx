@@ -15,7 +15,7 @@ export default function Home() {
             <p className="text-[26px] lg:text-[36px] font-primary mb-4 lg:mb-12">
               Abu Dhabi, UAE
             </p>
-            <Link href="/" className="btn mb-[30px]">hire me</Link>
+            <Link href="/contact" className="btn mb-[30px]">hire me</Link>
           </div>
 
           <div className="flex justify-end max-h-96 lg:max-h-max">
