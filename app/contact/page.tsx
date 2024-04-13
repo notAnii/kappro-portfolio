@@ -1,15 +1,30 @@
+'use client'
 import Image from "next/image"
+import { motion } from "framer-motion";
+import {transition1} from "@/utils/transitions";
 
 type Props = {}
 
 const Contact = (props: Props) => {
   return (
-    <section className="section">
+    <motion.section 
+      initial={{ opacity: 0, y: '100%'}}
+      animate={{ opacity: 1, y: 0}}
+      exit={{ opacity: 0, y: '100%'}}
+      transition={transition1}
+      className="section"
+    >
       <div className="container mx-auto h-full">
         <div className="flex flex-col lg:flex-row h-full items-center
         justify-start pt-36 gap-x-8 text-center lg:text-left">
           {/* bg */}
-          <div className="hidden lg:flex bg-[#eef7f9] absolute bottom-0 left-0 right-0 top-72 -z-10"/>
+          <motion.div 
+            initial={{ opacity: 0, y: '100%'}}
+            animate={{ opacity: 1, y: 0}}
+            exit={{ opacity: 0, y: '100%'}}
+            transition={transition1}
+            className="hidden lg:flex bg-[#eef7f9] absolute bottom-0 left-0 right-0 top-72 -z-10"
+          />
 
           {/* contact form */}
           <div className="lg:flex-1 lg:pt-32 px-4">
@@ -41,7 +56,12 @@ const Contact = (props: Props) => {
           </div>
 
           {/* image */}
-          <div className="lg:flex-1">
+          <motion.div
+          initial={{ opacity: 0, y: '100%'}}
+          animate={{ opacity: 1, y: 0}}
+          exit={{ opacity: 0, y: '100%'}}
+          transition={{transition: transition1, duration: 1.5}}
+          className="lg:flex-1">
             <Image
               className=""
               src="/assets/images/dev/contact.png"
@@ -49,10 +69,10 @@ const Contact = (props: Props) => {
               width={653}
               height={962}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
