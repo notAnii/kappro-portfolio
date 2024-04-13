@@ -6,8 +6,8 @@ type Props = {}
 const Portfolio = (props: Props) => {
   return (
     <section className="section">
-      <div className="contianer mx-auto h-full relative">
-        <div className="flex flex-col lg:flex-row h-full items-center justify-center gap-x-24
+      <div className="container mx-auto h-full relative">
+        <div className="flex flex-col lg:flex-row h-full items-center justify-start gap-x-24
         text-center lg:text-left pt-24 lg:pt-36 pb-8">
           {/* text */}
           <div className="flex flex-col lg:items-start">
