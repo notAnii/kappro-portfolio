@@ -38,7 +38,7 @@ const Portfolio = (props: Props) => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. 
               Molestias voluptates itaque, deleniti ad minima ducimus.
             </p>
-            <Link href="/" className="btn mb-[30px] mx-auto lg:mx-0">View Albums</Link>
+            <Link href="/albums" className="btn mb-[30px] mx-auto lg:mx-0">View Albums</Link>
           </motion.div>
           {/* image grid*/}
           <div className="grid grid-cols-2 lg:gap-2">
