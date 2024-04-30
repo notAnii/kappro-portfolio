@@ -18,7 +18,8 @@ export default defineType({
         name: 'aboutText',
         title: 'About Text',
         description: 'This is the paragraph that will be displayed on the about page',
-        type: 'text',
+        type: 'array',
+        of: [{type: 'block'}],
     }),
   ],
   preview: {

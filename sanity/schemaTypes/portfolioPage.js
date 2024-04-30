@@ -9,7 +9,8 @@ export default defineType({
         name: 'portfolioText',
         title: 'Portfolio Text',
         description: 'This is the paragraph that will be displayed on the portfolio page',
-        type: 'text',
+        type: 'array',
+        of: [{type: 'block'}],
     }),
 
     defineField({

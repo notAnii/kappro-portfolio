@@ -18,4 +18,8 @@
     .btn {
       @apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-primary text-white;
     }
+    .rich-text-container p:empty {
+      line-height: 1.5;
+      min-height: 1.5rem;
+    }
   }

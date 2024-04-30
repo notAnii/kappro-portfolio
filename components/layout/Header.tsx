@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Socials from "./Socials"
+import Socials from "../shared/Socials"
 import MobileNav from "./MobileNav"
 import { NAV_LINKS } from "@/constants"
 import Image from "next/image"

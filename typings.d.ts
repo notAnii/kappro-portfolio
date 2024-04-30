@@ -1,0 +1,72 @@
+interface SanityBody {
+    _createdAt: string;
+    _id: string;
+    _rev: string;
+    _updatedAt: string;
+}
+
+interface Image {
+    _key: string;
+    _type: "image";
+    asset: {
+        _ref: string;
+        _type: "reference";
+    };
+}
+
+interface Block {
+    _key: string;
+    _type: "block";
+    children: {
+        _key: string;
+        _type: "span";
+        marks: [];
+        text: string;
+    }[];
+    markDefs: [];
+    style: string;
+
+}
+
+interface Slug {
+    _type: "slug";
+    current: string;
+}
+
+export interface HomeInfo extends SanityBody {
+    _type: "home";
+    location: string;
+    homeImage: Image;
+}
+
+export interface AboutInfo extends SanityBody {
+    _type: "about";
+    aboutImage: Image;
+    aboutText: Block;
+}
+
+export interface PortfolioInfo extends SanityBody {
+    _type: "portfolio";
+    portfolioText: Block;
+    portfolioImages: Image[];
+}
+
+export interface Album extends SanityBody {
+    _type: "albums";
+    albumName: string;
+    slug: Slug;
+    coverImage: Image;
+}
+
+export interface AlbumDetailInfo extends SanityBody {
+    _type: "albums";
+    albumName: string;
+    slug: Slug;
+    albumImages: Image[];
+}
+
+export interface ContactInfo extends SanityBody {
+    _type: "contact";
+    contactText: string;
+    contactImage: Image;
+}
