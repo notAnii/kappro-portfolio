@@ -58,11 +58,11 @@ export interface Album extends SanityBody {
     coverImage: Image;
 }
 
-export interface AlbumDetailInfo extends SanityBody {
+export interface SingleAlbumInfo extends SanityBody {
     _type: "albums";
     albumName: string;
     slug: Slug;
-    albumImages: Image[];
+    images: Image[];
 }
 
 export interface ContactInfo extends SanityBody {
