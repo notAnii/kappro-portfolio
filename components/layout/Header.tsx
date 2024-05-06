@@ -4,7 +4,6 @@ import Socials from "../shared/Socials"
 import MobileNav from "./MobileNav"
 import { NAV_LINKS } from "@/constants"
 import Image from "next/image"
-import { useState, useEffect } from 'react';
 
 type Props = {}
 
@@ -13,12 +12,12 @@ const Header = (props: Props) => {
     <header className='fixed w-full px-[30px] lg:px-[100px] z-30 h-[100px] lg:h-[140px] flex items-center'>
         <div className="flex flex-col lg:flex-row lg:items-center w-full justify-between">
             {/* Logo */}
-            <Link href="/" className="max-w-[78px]">
+            <Link href="/" className="max-w-[78px] pt-2">
                 <Image 
-                    src='/assets/images/logo.jpg'
+                    src='/assets/images/logo.png'
                     alt="Logo"
-                    width={75}
-                    height={75}
+                    width={80}
+                    height={80}
                 />
             </Link>
 
