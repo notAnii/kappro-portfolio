@@ -1,9 +1,10 @@
+'use client'
 import Link from "next/link"
 import Socials from "../shared/Socials"
 import MobileNav from "./MobileNav"
 import { NAV_LINKS } from "@/constants"
 import Image from "next/image"
-
+import { useState, useEffect } from 'react';
 
 type Props = {}
 
@@ -23,7 +24,7 @@ const Header = (props: Props) => {
 
             {/* nav initially hidden - show on destkop mode */}
             <nav className="hidden xl:flex gap-x-12 font-semibold">
-                {NAV_LINKS.map((link, index) => (
+                {NAV_LINKS.map((link) => (
                     <Link href={link.href} key={link.key} className="text-[#696c6d] hover:text-primary transition">
                         {link.label}
                     </Link>

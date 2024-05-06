@@ -38,7 +38,7 @@ const Albums = ({albums}: Props) => {
                   />
                   <div className="absolute inset-0 bg-black opacity-45"/>
                   <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="px-2 font-secondary text-white text-center text-3xl uppercase 
+                  <p className="px-2 font-secondary font-bold text-white text-center text-3xl uppercase 
                       overflow-ellipsis overflow-hidden whitespace-normal"
                       style={{ 
                           display: '-webkit-box',
@@ -64,7 +64,7 @@ const Albums = ({albums}: Props) => {
                   />
                   <div className="absolute inset-0 bg-black opacity-45"/>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <p className="px-2 font-secondary text-white text-center text-3xl uppercase 
+                    <p className="px-2 font-secondary font-bold text-white text-center text-3xl uppercase 
                       overflow-ellipsis overflow-hidden whitespace-normal" style={{ display: '-webkit-box', WebkitBoxOrient: 'vertical', WebkitLineClamp: '2' }}>
                       FRIEREN BEYOND JOURNEY'S END FRIEREN BEYOND JOURNEY'S END FRIEREN BEYOND JOURNEY'S END
                     </p>
