@@ -25,7 +25,7 @@ const AboutPage = ({aboutInfo}: Props) => {
             <div className="flex flex-col lg:flex-row h-full items-center 
             justify-center gap-x-24 text-center lg:text-left lg:pt-16">
                 {/* image*/}
-                <div className="flex-1 max-h-96 lg:max-h-max order-2 lg:order-none overflow-hidden">
+                <div className="flex-1 w-[464px] h-[618px] max-h-96 lg:max-h-max order-2 lg:order-none overflow-hidden">
                     <Image 
                         src={urlFor(aboutInfo.aboutImage).url()}
                         alt="About Image"
