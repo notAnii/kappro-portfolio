@@ -1,11 +1,14 @@
 'use client'
-import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion";
 import {transition1} from "@/utils/transitions";
 import { PortfolioInfo } from "@/typings";
 import { PortableText } from "next-sanity";
-import { urlFor } from "@/sanity";
+import VideoPlayer from "../shared/VideoPlayer";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
 
 type Props = {
   portfolioInfo: PortfolioInfo
@@ -32,26 +35,18 @@ const PortfolioPage = ({portfolioInfo}: Props) => {
             className="flex flex-col lg:items-start"
           >
             <h1 className="h1">
-              Portfolio
+              Videos
             </h1>
             <div className="mb-12 max-w-sm rich-text-container">
               <PortableText value={portfolioInfo.portfolioText} />
             </div>
             <Link href="/albums" className="btn mb-[30px] mx-auto lg:mx-0">View Albums</Link>
           </motion.div>
-          {/* image grid*/}
-          <div className="grid grid-cols-2 lg:gap-2">
-            {portfolioInfo?.portfolioImages.map(image => (
-              <div key={image._key} className="max-w-[250px] lg:max-w-[320px] h-[187px] lg:h-[220px] bg-accent overflow-hidden">
-                <Image
-                  className="object-cover h-full lg:h-[220px] hover:scale-110 transition-all duration-500"
-                  src={urlFor(image).url()}
-                  alt="Portfolio Image"
-                  width={320}
-                  height={223}
-                />
-              </div>
-            ))}
+          {/* video section */}
+          <div className="w-full h-auto px-2 lg:px-0 lg:w-[703px] lg:h-[396px]">
+            <Swiper navigation={true} modules={[Navigation]} className="w-full h-full">
+              <SwiperSlide><VideoPlayer /></SwiperSlide>
+            </Swiper>
           </div>
       
         </div>
