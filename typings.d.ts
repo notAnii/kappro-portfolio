@@ -45,10 +45,10 @@ export interface AboutInfo extends SanityBody {
     aboutText: Block;
 }
 
-export interface PortfolioInfo extends SanityBody {
+export interface VideosInfo extends SanityBody {
     _type: "portfolio";
-    portfolioText: Block;
-    portfolioImages: Image[];
+    vidoesText: Block;
+    videoLinks: string[];
 }
 
 export interface Album extends SanityBody {

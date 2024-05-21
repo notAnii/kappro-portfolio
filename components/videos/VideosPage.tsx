@@ -2,7 +2,7 @@
 import Link from "next/link"
 import { motion } from "framer-motion";
 import {transition1} from "@/utils/transitions";
-import { PortfolioInfo } from "@/typings";
+import { VideosInfo } from "@/typings";
 import { PortableText } from "next-sanity";
 import VideoPlayer from "../shared/VideoPlayer";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,10 +11,10 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
 type Props = {
-  portfolioInfo: PortfolioInfo
+  videosInfo: VideosInfo
 }
 
-const PortfolioPage = ({portfolioInfo}: Props) => {
+const PortfolioPage = ({videosInfo}: Props) => {
   return (
     <motion.section 
       initial={{ opacity: 0, y: '100%'}}
@@ -38,7 +38,7 @@ const PortfolioPage = ({portfolioInfo}: Props) => {
               Videos
             </h1>
             <div className="mb-12 max-w-sm rich-text-container">
-              <PortableText value={portfolioInfo.portfolioText} />
+              <PortableText value={videosInfo.vidoesText} />
             </div>
             <Link href="/albums" className="btn mb-[30px] mx-auto lg:mx-0">View Albums</Link>
           </motion.div>
