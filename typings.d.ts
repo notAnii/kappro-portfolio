@@ -46,8 +46,8 @@ export interface AboutInfo extends SanityBody {
 }
 
 export interface VideosInfo extends SanityBody {
-    _type: "portfolio";
-    vidoesText: Block;
+    _type: "videos";
+    videosText: Block;
     videoLinks: string[];
 }
 
