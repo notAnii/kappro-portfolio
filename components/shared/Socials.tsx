@@ -24,11 +24,6 @@ const Socials = (props: Props) => {
         </li>
         <li>
           <Link href='https://www.instagram.com/kp.uae/'>
-            <ImPinterest />
-          </Link>
-        </li>
-        <li>
-          <Link href='https://www.instagram.com/kp.uae/'>
             <ImYoutube />
           </Link>
         </li>
