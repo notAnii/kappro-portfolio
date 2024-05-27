@@ -34,7 +34,12 @@ export default defineType({
         name: 'images',
         title: 'Images',
         type: 'array',
-        of: [{ type: 'image' }],
+        of: [{ 
+          type: 'image'
+        }],
+        options: {
+          layout: 'grid'
+        }
     }),
   ],
   preview: {
