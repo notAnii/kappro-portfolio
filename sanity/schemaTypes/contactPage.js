@@ -5,25 +5,47 @@ export default defineType({
   title: 'Contact',
   type: 'document',
   fields: [
+    
     defineField({
-        name: 'contactText',
-        title: 'Contact Text',
-        type: 'string',
+      name: 'phoneNumber',
+      title: 'Phone Number',
+      type: 'string',
     }),
 
     defineField({
-        name: 'contactImage',
-        title: 'Contact Image',
-        type: 'image',
-        options: {
-          hotspot: true,
-        }
+      name: 'email',
+      title: 'Email',
+      type: 'string',
     }),
+
+    defineField({
+      name: 'facebook',
+      title: 'Facebook',
+      type: 'string',
+    }),
+
+    defineField({
+      name: 'instagram',
+      title: 'Instagram',
+      type: 'string',
+    }),
+
+    defineField({
+      name: 'twitter',
+      title: 'Twitter',
+      type: 'string',
+    }),
+
+    defineField({
+      name: 'youtube',
+      title: 'Youtube',
+      type: 'string',
+    }),
+
   ],
   preview: {
     select: {
-      title: 'contactText',
-      media: 'contactImage',
+      title: 'phoneNumber',
     },
   },
 })

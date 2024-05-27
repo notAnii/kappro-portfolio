@@ -67,6 +67,10 @@ export interface SingleAlbumInfo extends SanityBody {
 
 export interface ContactInfo extends SanityBody {
     _type: "contact";
-    contactText: string;
-    contactImage: Image;
+    phoneNumber: string;
+    email: string;
+    facebook: string;
+    instagram: string;
+    twitter: string;
+    youtube: string;
 }

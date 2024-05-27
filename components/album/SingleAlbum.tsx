@@ -25,11 +25,11 @@ const SingleAlbum = ({ album }: Props) => {
         </h1>
         {/* album grid */}
         <div className="flex justify-center items-center">
-          <div className="columns-4 gap-3 w-[1200px] mx-auto space-y-3 pb-28">
+          <div className="columns-1 sm:columns-4 gap-3 w-[1200px] mx-auto space-y-3 pb-28">
             {album.images.map(image => (
                 <div className="break-avoid-inside" key={image._key}>
                   <Image
-                    className="hover:scale-110 transition-all duration-500"
+                    className="sm:hover:scale-110 transition-all duration-500"
                     src={urlFor(image).url()}
                     alt="Test"
                     width={700}
