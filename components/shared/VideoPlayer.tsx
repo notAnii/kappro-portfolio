@@ -4,6 +4,7 @@ const ReactPlayer = dynamic(() => import("react-player"), { ssr: true });
 
 type Props = {
   videosrc: string
+  playing: boolean
 }
 const VideoPlayer = (props: Props) => {
     
@@ -16,6 +17,7 @@ const VideoPlayer = (props: Props) => {
         url={props.videosrc}
         controls={true}
         pip={false}
+        playing={props.playing}
       />
     </div>
   )

@@ -11,12 +11,15 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 import CustomPrevButton from "./CustomPrevButton";
 import CustomNextButton from "./CustomNextButton";
+import { useState } from "react";
 
 type Props = {
   videosInfo: VideosInfo
 }
 
 const VideosPage = ({videosInfo}: Props) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [totalSlides, setTotalSlides] = useState(0);
 
   return (
     <motion.section 
@@ -50,36 +53,27 @@ const VideosPage = ({videosInfo}: Props) => {
             <Swiper
               modules={[Navigation]}
               className="w-full h-full"
+              onSwiper={(swiper) => setTotalSlides(swiper.slides.length)}
+              onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
             >
-              <SwiperSlide>
-                <div className="flex justify-center items-center">
-                  <div className="w-[703px]">
-                    <VideoPlayer videosrc="https://www.youtube.com/watch?v=2n8WwjzayTY&pp=ygUUZnJlZWRvbSBjcnVuY2h5cnRvbGw%3D"/>
+              {videosInfo.videoLinks.map((video, index) => (
+                <SwiperSlide key={index}>
+                  <div className="flex justify-center items-center">
+                    <div className="w-[703px]">
+                      <VideoPlayer 
+                        videosrc={video}
+                        playing={activeIndex === index}
+                      />
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
+                </SwiperSlide>
+              ))}
 
-              <SwiperSlide>
-                <div className="flex justify-center items-center">
-                  <div className="w-[703px]">
-                    <VideoPlayer videosrc="https://www.youtube.com/watch?v=OCxd5G7wtPM"/>
-                  </div>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="flex justify-center items-center">
-                  <div className="w-[703px]">
-                    <VideoPlayer videosrc="https://www.youtube.com/watch?v=dQMjPsrQRxo"/>
-                  </div>
-                </div>
-              </SwiperSlide>
-
-
-              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10">
+              {/* custom navigation buttons */}
+              <div className={`absolute left-0 top-1/2 transform -translate-y-1/2 z-10 transition-opacity duration-300 ${activeIndex === 0 ? 'opacity-0' : 'opacity-100'}`}>
                 <CustomPrevButton />
               </div>
-              <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10">
+              <div className={`absolute right-0 top-1/2 transform -translate-y-1/2 z-10 transition-opacity duration-300 ${activeIndex === totalSlides - 1 ? 'opacity-0' : 'opacity-100'}`}>
                 <CustomNextButton />
               </div>
             </Swiper>
