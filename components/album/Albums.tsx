@@ -11,7 +11,6 @@ type Props = {
 }
 
 const Albums = ({albums}: Props) => {
-  const images = Array(18).fill("/assets/images/dev/example2.png")
   return (
     <motion.section 
       className="overflow-y-scroll h-screen"
@@ -51,26 +50,6 @@ const Albums = ({albums}: Props) => {
                   </div>
                 </div>
               </Link>
-            ))}
-
-            {images.map((src, index) => (
-            <Link key={index} href="/">
-                <div className="overflow-hidden relative rounded-lg h-[200px] hover:scale-110 transition-all duration-500">
-                  <Image
-                    className="object-cover object-top absolute inset-0"
-                    src={src}
-                    alt="picture"
-                    layout="fill"
-                  />
-                  <div className="absolute inset-0 bg-black opacity-45"/>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <p className="px-2 font-secondary font-bold text-white text-center text-3xl uppercase 
-                      overflow-ellipsis overflow-hidden whitespace-normal" style={{ display: '-webkit-box', WebkitBoxOrient: 'vertical', WebkitLineClamp: '2' }}>
-                      FRIEREN BEYOND JOURNEY'S END FRIEREN BEYOND JOURNEY'S END FRIEREN BEYOND JOURNEY'S END
-                    </p>
-                  </div>
-                </div>
-            </Link>
             ))}
           </div>
         </div>
