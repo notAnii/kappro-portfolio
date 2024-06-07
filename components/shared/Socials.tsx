@@ -9,17 +9,7 @@ const Socials = (props: Props) => {
       <ul className="flex gap-x-4">
         <li>
           <Link href='https://www.instagram.com/kp.uae/'>
-            <ImFacebook />
-          </Link>
-        </li>
-        <li>
-          <Link href='https://www.instagram.com/kp.uae/'>
             <ImInstagram />
-          </Link>
-        </li>
-        <li>
-          <Link href='https://www.instagram.com/kp.uae/'>
-            <ImTwitter />
           </Link>
         </li>
         <li>
