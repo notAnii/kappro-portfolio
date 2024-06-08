@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ImFacebook, ImInstagram, ImTwitter, ImPinterest, ImYoutube} from 'react-icons/im'
+import { ImInstagram, ImYoutube} from 'react-icons/im'
 
 type Props = {}
 
