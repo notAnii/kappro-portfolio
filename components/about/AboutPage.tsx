@@ -44,7 +44,7 @@ const AboutPage = ({aboutInfo}: Props) => {
                     justify-center items-center lg:items-start"
                 >
                     <h1 className="h1">About Me</h1>
-                    <div className="mb-12 max-w-sm rich-text-container">
+                    <div className="mb-12 lg:min-w-[400px] max-w-sm rich-text-container">
                         <PortableText value={aboutInfo.aboutText} />
                     </div>
                     <Link href="/portfolio" className="btn">View my work</Link>

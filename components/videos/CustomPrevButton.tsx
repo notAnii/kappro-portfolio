@@ -4,7 +4,7 @@ import { TbCircleChevronLeft } from "react-icons/tb";
 const CustomPrevButton = () => {
   const swiper = useSwiper();
   return (
-    <div>
+    <div className="hidden lg:block">
       <button onClick={() => swiper.slidePrev()}>
         <TbCircleChevronLeft size={37} />
       </button>
