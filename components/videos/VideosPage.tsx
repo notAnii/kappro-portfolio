@@ -30,26 +30,26 @@ const VideosPage = ({videosInfo}: Props) => {
       className="section"
     >
       <div className="container mx-auto h-full relative">
-        <div className="flex flex-col lg:flex-row h-full items-center justify-start gap-x-24
-        text-center lg:text-left pt-24 lg:pt-36 pb-8">
+        <div className="flex flex-col xl:flex-row h-full items-center justify-start gap-x-24
+        text-center xl:text-left pt-24 xl:pt-36 pb-8">
           {/* text */}
           <motion.div
             initial={{ opacity: 0, y: '-80%'}}
             animate={{ opacity: 1, y: 0}}
             exit={{ opacity: 0, y: '-80%'}}
             transition={transition1}
-            className="flex flex-col lg:items-start"
+            className="flex flex-col xl:items-start"
           >
             <h1 className="h1">
               Videos
             </h1>
-            <div className="mb-12 lg:min-w-[370px] max-w-md rich-text-container">
+            <div className="mb-12 xl:min-w-[370px] max-w-md rich-text-container">
               <PortableText value={videosInfo.videosText} />
             </div>
-            <Link href="/albums" className="btn mb-[30px] mx-auto lg:mx-0">View Albums</Link>
+            <Link href="/albums" className="btn mb-[30px] mx-auto xl:mx-0">View Albums</Link>
           </motion.div>
           {/* video section */}
-          <div className="w-full h-auto px-2 lg:px-0 lg:min-w-[800px] lg:h-[396px]">
+          <div className="w-full h-auto px-2 xl:px-0 xl:min-w-[800px] xl:h-[396px]">
             <Swiper
               modules={[Navigation]}
               className="w-full h-full"
