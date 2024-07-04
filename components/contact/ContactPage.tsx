@@ -46,7 +46,7 @@ const ContactPage = ({contactInfo}: Props) => {
       animate={{ opacity: 1, y: 0}}
       exit={{ opacity: 0, y: '100%'}}
       transition={transition1}
-      className="section"
+      className="section overflow-y-scroll"
     >
       <div className="container mx-auto h-full">
         <div className="flex flex-col lg:flex-row h-full items-center
@@ -98,24 +98,23 @@ const ContactPage = ({contactInfo}: Props) => {
             animate={{ opacity: 1, y: 0}}
             exit={{ opacity: 0, y: '100%'}}
             transition={{transition: transition1, duration: 1.5}}
-            className="lg:flex-1 lg:pt-14"
+            className="mt-[35px] lg:flex-1 lg:pt-14 pb-12"
             >
-              <div className="w-[500px] h-[200px] flex justify-center items-center">
+              <div className="flex justify-center items-center">
                 <div className="flex flex-col gap-y-5">
                   <div className="flex items-center gap-x-4">
-                    <BiSolidPhoneCall className="text-4xl text-primary"/>
+                    <BiSolidPhoneCall className="text-2xl lg:text-4xl text-primary"/>
                     <p className="font-extrabold">{contactInfo.phoneNumber}</p>
                   </div>
                   <div className="flex items-center gap-x-4">
-                    <MdEmail className="text-4xl text-primary"/>
+                    <MdEmail className="text-2xl lg:text-4xl text-primary"/>
                     <p className="font-extrabold">{contactInfo.email}</p>
                   </div>
                   <Link href={`https://www.instagram.com/${contactInfo.instagram}/`} className="flex items-center gap-x-4">
-                    <FaInstagram className="text-4xl text-primary"/>
+                    <FaInstagram className="text-2xl lg:text-4xl text-primary"/>
                     <p className="font-extrabold">{contactInfo.instagram}</p>
                   </Link>
                 </div>
-                
               </div>
           </motion.div>
         </div>
