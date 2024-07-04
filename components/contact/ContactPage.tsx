@@ -50,7 +50,7 @@ const ContactPage = ({contactInfo}: Props) => {
     >
       <div className="container mx-auto h-full">
         <div className="flex flex-col lg:flex-row h-full items-center
-        justify-start mt-24 lg:mt-0 px-1 gap-x-8 text-center lg:text-left">
+        justify-start pt-24 lg:pt-0 px-1 gap-x-8 text-center lg:text-left">
           {/* bg */}
           <motion.div 
             initial={{ opacity: 0, y: '100%'}}

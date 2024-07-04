@@ -40,7 +40,7 @@ const AboutPage = ({aboutInfo}: Props) => {
                     animate={{ opacity: 1, y: 0}}
                     exit={{ opacity: 0, y: '-80%'}}
                     transition={transition1}
-                    className="flex-1 mt-24 lg:mt-0 mb-14 lg:w-auto z-10 flex flex-col 
+                    className="flex-1 pt-24 lg:pt-0 mb-14 lg:w-auto z-10 flex flex-col 
                     justify-center items-center lg:items-start"
                 >
                     <h1 className="h1">About Me</h1>
