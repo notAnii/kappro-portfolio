@@ -34,9 +34,9 @@ const VideosPage = ({videosInfo}: Props) => {
             lg:justify-center gap-x-24 text-center lg:text-left lg:pt-16">
           {/* text */}
           <motion.div
-            initial={{ opacity: 0, y: '-80%'}}
-            animate={{ opacity: 1, y: 0}}
-            exit={{ opacity: 0, y: '-80%'}}
+            initial={{ y: '-80%'}}
+            animate={{ y: 0 }}
+            exit={{ y: '-80%' }}
             transition={transition1}
             className="flex flex-col xl:items-start mt-24 lg:mt-0"
           >
@@ -58,7 +58,7 @@ const VideosPage = ({videosInfo}: Props) => {
             >
               {videosInfo.videoLinks.map((video, index) => (
                 <SwiperSlide key={index}>
-                  <div className="flex justify-center items-center">
+                  <div className="flex justify-center items-center mb-4">
                     <div className="w-[703px]">
                       <VideoPlayer 
                         videosrc={video}
@@ -78,6 +78,7 @@ const VideosPage = ({videosInfo}: Props) => {
               </div>
             </Swiper>
           </div>
+
         </div>
       </div>  
     </motion.section>

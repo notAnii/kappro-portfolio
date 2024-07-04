@@ -53,16 +53,24 @@ const ContactPage = ({contactInfo}: Props) => {
         justify-start mt-24 lg:mt-0 px-1 gap-x-8 text-center lg:text-left">
           {/* bg */}
           <motion.div 
-            initial={{ opacity: 0, y: '100%'}}
-            animate={{ opacity: 1, y: 0}}
-            exit={{ opacity: 0, y: '100%'}}
+            initial={{ y: '100%'}}
+            animate={{ y: 0}}
+            exit={{ y: '100%'}}
             transition={transition1}
             className="hidden lg:flex bg-[#f7f1ee] absolute bottom-0 left-0 right-0 top-72 -z-10"
           />
 
           {/* contact form */}
           <div className="lg:flex-1 lg:pt-32 px-4">
-            <h1 className="h1">Contact me</h1>
+            <motion.h1 
+              className="h1"
+              initial={{ y: '80%'}}
+              animate={{ y: 0}}
+              exit={{ y: '80%'}}
+              transition={{transition: transition1}}
+              >
+              Contact me
+            </motion.h1>
             <p className="mb-12">I would love to get suggestions from you.</p>
             <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-y-4">
               <div className="flex gap-x-10">
@@ -92,12 +100,12 @@ const ContactPage = ({contactInfo}: Props) => {
             </form>
           </div>
 
-          {/* image */}
+          {/* links */}
           <motion.div
-            initial={{ opacity: 0, y: '100%'}}
-            animate={{ opacity: 1, y: 0}}
-            exit={{ opacity: 0, y: '100%'}}
-            transition={{transition: transition1, duration: 1.5}}
+            initial={{ y: '80%'}}
+            animate={{ y: 0}}
+            exit={{ y: '80%'}}
+            transition={{transition: transition1}}
             className="mt-[35px] lg:flex-1 lg:pt-14 pb-6"
             >
               <div className="flex justify-center items-center">

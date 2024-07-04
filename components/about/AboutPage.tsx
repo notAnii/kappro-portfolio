@@ -23,22 +23,28 @@ const AboutPage = ({aboutInfo}: Props) => {
         <div className="container mx-auto h-full relative">
             {/* text and image wrapper*/}
             <div className="flex flex-col lg:flex-row h-full items-center justify-start
-            lg:justify-center gap-x-24 text-center lg:text-left lg:pt-16">
+                lg:justify-center gap-x-24 text-center lg:text-left lg:pt-16">
                 {/* image*/}
-                <div className="flex-1 max-h-[739px] order-2 lg:order-none overflow-hidden">
+                <motion.div
+                    className="flex-1 max-h-[739px] order-2 lg:order-none overflow-hidden"
+                    initial={{ y: '80%'}}
+                    animate={{ y: 0 }}
+                    exit={{ y: '80%' }}
+                    transition={transition1}
+                    >
                     <Image 
                         src={urlFor(aboutInfo.aboutImage).url()}
                         alt="About Image"
                         width={689}
                         height={851}
                     />
-                </div>
+                </motion.div>
 
                 {/* text */}
                 <motion.div 
-                    initial={{ opacity: 0, y: '-80%'}}
-                    animate={{ opacity: 1, y: 0}}
-                    exit={{ opacity: 0, y: '-80%'}}
+                    initial={{ y: '-80%' }}
+                    animate={{ y: 0 }}
+                    exit={{ y: '-80%' }}
                     transition={transition1}
                     className="flex-1 mt-24 lg:mt-0 mb-14 lg:w-auto z-10 flex flex-col 
                     justify-center items-center lg:items-start"
