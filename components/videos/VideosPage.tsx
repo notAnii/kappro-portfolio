@@ -31,7 +31,7 @@ const VideosPage = ({videosInfo}: Props) => {
     >
       <div className="container mx-auto h-full relative">
         <div className="flex flex-col xl:flex-row h-full items-center justify-start gap-x-24
-        text-center xl:text-left pt-24 xl:pt-36 pb-8">
+        text-center xl:text-left pt-[10dvh] xl:pt-[15dvh] pb-8">
           {/* text */}
           <motion.div
             initial={{ opacity: 0, y: '-80%'}}

@@ -13,14 +13,14 @@ type Props = {
 const Albums = ({albums}: Props) => {
   return (
     <motion.section 
-      className="overflow-y-scroll"
+      className="section overflow-y-scroll"
       initial={{ opacity: 0, y: '100%'}}
       animate={{ opacity: 1, y: 0}}
       exit={{ opacity: 0, y: '100%'}}
       transition={transition1}
     >
       <div className="container mx-auto">
-        <div className="flex flex-col gap-8 pt-24 lg:pt-36 pb-12">
+        <div className="flex flex-col gap-8 pt-[10dvh] lg:pt-[14dvh] pb-12">
           <h1 className="h1 lg:text-[64px] text-center xl:text-left">
             Albums
           </h1>
