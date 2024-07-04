@@ -40,11 +40,11 @@ const AboutPage = ({aboutInfo}: Props) => {
                     animate={{ opacity: 1, y: 0}}
                     exit={{ opacity: 0, y: '-80%'}}
                     transition={transition1}
-                    className="flex-1 pt-[144dvh] pb-14 lg:pt-0 lg:w-auto z-10 flex flex-col 
+                    className="flex-1 pt-36 pb-14 lg:pt-0 lg:w-auto z-10 flex flex-col 
                     justify-center items-center lg:items-start"
                 >
                     <h1 className="h1">About Me</h1>
-                    <div className="mb-12 lg:min-w-[400px] max-w-sm rich-text-container">
+                    <div className="mb-12 mx-3 lg:mx-0 lg:min-w-[400px] max-w-sm rich-text-container">
                         <PortableText value={aboutInfo.aboutText} />
                     </div>
                     <Link href="/portfolio" className="btn">View my work</Link>

@@ -31,7 +31,7 @@ const VideosPage = ({videosInfo}: Props) => {
     >
       <div className="container mx-auto h-full relative">
         <div className="flex flex-col xl:flex-row h-full items-center justify-start gap-x-24
-        text-center xl:text-left pt-[96dvh] xl:pt-36 pb-8">
+        text-center xl:text-left pt-24 xl:pt-36 pb-8">
           {/* text */}
           <motion.div
             initial={{ opacity: 0, y: '-80%'}}
@@ -43,7 +43,7 @@ const VideosPage = ({videosInfo}: Props) => {
             <h1 className="h1">
               Videos
             </h1>
-            <div className="mb-12 xl:min-w-[370px] max-w-md rich-text-container">
+            <div className="mb-12 mx-3 lg:mx-0 xl:min-w-[370px] max-w-md rich-text-container">
               <PortableText value={videosInfo.videosText} />
             </div>
             <Link href="/albums" className="btn mb-[30px] mx-auto xl:mx-0">View Albums</Link>
