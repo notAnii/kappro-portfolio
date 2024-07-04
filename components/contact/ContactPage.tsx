@@ -88,7 +88,7 @@ const ContactPage = ({contactInfo}: Props) => {
                   placeholder="Your message"
                   name="message"
               />
-              <button className="btn mb-[30px] mx-auto lg:mx-0 self-start">Send it</button>
+              <button className="btn mb-[35px] mx-auto lg:mx-0 self-start">Send it</button>
             </form>
           </div>
 
@@ -98,7 +98,7 @@ const ContactPage = ({contactInfo}: Props) => {
             animate={{ opacity: 1, y: 0}}
             exit={{ opacity: 0, y: '100%'}}
             transition={{transition: transition1, duration: 1.5}}
-            className="mt-[35px] lg:flex-1 lg:pt-14 pb-12"
+            className="mt-[35px] lg:flex-1 lg:pt-14 pb-6"
             >
               <div className="flex justify-center items-center">
                 <div className="flex flex-col gap-y-5">
