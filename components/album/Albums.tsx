@@ -14,9 +14,9 @@ const Albums = ({albums}: Props) => {
   return (
     <motion.section 
       className="section overflow-y-scroll" 
-      initial={{ opacity: 0, y: '100%'}}
-      animate={{ opacity: 1, y: 0}}
-      exit={{ opacity: 0, y: '100%'}}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       transition={transition1}
     >
       <div className="container mx-auto">
