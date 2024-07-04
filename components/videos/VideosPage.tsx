@@ -30,15 +30,15 @@ const VideosPage = ({videosInfo}: Props) => {
       className="section overflow-y-scroll"
     >
       <div className="container mx-auto h-full relative">
-        <div className="flex flex-col xl:flex-row h-full items-center justify-start gap-x-24
-        text-center xl:text-left pt-24 xl:pt-36 pb-8">
+        <div className="flex flex-col lg:flex-row h-full items-center justify-start
+            lg:justify-center gap-x-24 text-center lg:text-left lg:pt-16">
           {/* text */}
           <motion.div
             initial={{ opacity: 0, y: '-80%'}}
             animate={{ opacity: 1, y: 0}}
             exit={{ opacity: 0, y: '-80%'}}
             transition={transition1}
-            className="flex flex-col xl:items-start"
+            className="flex flex-col xl:items-start mt-24 lg:mt-0"
           >
             <h1 className="h1">
               Videos

@@ -19,12 +19,12 @@ const SingleAlbum = ({ album }: Props) => {
     transition={transition1}
   >
     <div className="container mx-auto">
-      <div className="flex flex-col gap-7 pt-24 lg:pt-36 pb-8">
-        <h1 className="h1 lg:text-[54px] text-center xl:text-left">
+      <div className="flex flex-col gap-7 mt-24 lg:mt-36 pb-8">
+        <h1 className="h1 lg:text-[54px] px-4 text-center xl:text-left">
           {album.albumName}
         </h1>
         {/* album grid */}
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center px-4">
           <div className="columns-1 sm:columns-4 gap-3 w-[1200px] mx-auto space-y-3 pb-28">
             {album.images.map(image => (
                 <div className="break-avoid-inside" key={image._key}>

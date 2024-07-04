@@ -13,46 +13,42 @@ type Props = {
 const Albums = ({albums}: Props) => {
   return (
     <motion.section 
-      className="section overflow-y-scroll"
+      className="section overflow-y-scroll" 
       initial={{ opacity: 0, y: '100%'}}
       animate={{ opacity: 1, y: 0}}
       exit={{ opacity: 0, y: '100%'}}
       transition={transition1}
     >
       <div className="container mx-auto">
-        <div className="flex flex-col gap-8 pt-24 lg:pt-36 pb-12">
-          <h1 className="h1 lg:text-[64px] text-center xl:text-left">
-            Albums
-          </h1>
-          {/* album grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-4">
-            {albums?.map(album => (
-              <Link key={album._id} href={`/albums/${album.slug.current}`}>
-                <div className="overflow-hidden relative rounded-xl h-[200px] hover:scale-110 transition-all duration-500">
-                  <Image
-                    className="object-cover absolute inset-0"
-                    src={urlFor(album.coverImage).url()}
-                    alt={album.albumName}
-                    layout="fill"
-                  />
-                  <div className="absolute inset-0 bg-black opacity-45"/>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="px-2 font-secondary font-bold text-white text-center text-3xl uppercase 
-                      overflow-ellipsis overflow-hidden whitespace-normal"
-                      style={{ 
-                          display: '-webkit-box',
-                          WebkitBoxOrient: 'vertical',
-                          WebkitLineClamp: '2' 
-                        }}
-                  >
-                      {album.albumName}
-                    </p>
+          <div className="flex flex-col gap-8 mt-24 lg:mt-36 pb-12">
+            <h1 className="h1 lg:text-[64px] px-4 text-center xl:text-left">
+              Albums
+            </h1>
+            {/* album grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 px-4">
+              {albums?.map(album => (
+                <Link key={album._id} href={`/albums/${album.slug.current}`}>
+                  <div className="overflow-hidden relative rounded-xl h-[165px] md:h-[200px] hover:scale-110 transition-all duration-500">
+                    <Image
+                      className="object-cover absolute inset-0"
+                      src={urlFor(album.coverImage).url()}
+                      alt={album.albumName}
+                      layout="fill"
+                    />
+                    <div className="absolute inset-0 bg-black opacity-45"/>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                    <p className="px-2 font-secondary font-bold text-white text-center text-3xl uppercase 
+                        overflow-ellipsis overflow-hidden whitespace-normal line-clamp-2"
+                    >
+                        {album.albumName}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              ))}
+              
+            </div>
           </div>
-        </div>
       </div>
     </motion.section>
   )

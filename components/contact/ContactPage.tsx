@@ -46,11 +46,11 @@ const ContactPage = ({contactInfo}: Props) => {
       animate={{ opacity: 1, y: 0}}
       exit={{ opacity: 0, y: '100%'}}
       transition={transition1}
-      className="section overflow-y-scroll"
+      className="section overflow-y-hidden"
     >
       <div className="container mx-auto h-full">
         <div className="flex flex-col lg:flex-row h-full items-center
-        justify-start pt-36 gap-x-8 text-center lg:text-left">
+        justify-start mt-24 lg:mt-0 px-1 gap-x-8 text-center lg:text-left">
           {/* bg */}
           <motion.div 
             initial={{ opacity: 0, y: '100%'}}
