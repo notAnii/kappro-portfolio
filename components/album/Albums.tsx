@@ -13,7 +13,7 @@ type Props = {
 const Albums = ({albums}: Props) => {
   return (
     <motion.section 
-      className="overflow-y-scroll h-screen"
+      className="overflow-y-scroll"
       initial={{ opacity: 0, y: '100%'}}
       animate={{ opacity: 1, y: 0}}
       exit={{ opacity: 0, y: '100%'}}

@@ -27,7 +27,7 @@ const VideosPage = ({videosInfo}: Props) => {
       animate={{ opacity: 1, y: 0}}
       exit={{ opacity: 0, y: '100%'}}
       transition={transition1}
-      className="section"
+      className="section overflow-y-scroll"
     >
       <div className="container mx-auto h-full relative">
         <div className="flex flex-col xl:flex-row h-full items-center justify-start gap-x-24
