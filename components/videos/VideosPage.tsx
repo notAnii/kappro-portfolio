@@ -38,7 +38,7 @@ const VideosPage = ({videosInfo}: Props) => {
             animate={{ opacity: 1, y: 0}}
             exit={{ opacity: 0, y: '-80%'}}
             transition={transition1}
-            className="flex flex-col xl:items-start pt-24 lg:pt-0"
+            className="flex flex-col xl:items-start mt-24 lg:mt-0"
           >
             <h1 className="h1">
               Videos

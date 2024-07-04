@@ -53,7 +53,7 @@ const MobileNav = (props: Props) => {
         <ul className='h-full flex flex-col justify-center items-center gap-y-8 text-primary font-primary font-bold text-3xl'>
         {NAV_LINKS.map((link) => (
           <li key={link.key} onClick={() => setOpenMenu(false)}>
-            <Link href={link.href}>
+            <Link href={link.href} replace>
               {link.label}
             </Link>
           </li>          

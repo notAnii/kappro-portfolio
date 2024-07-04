@@ -20,7 +20,7 @@ const Albums = ({albums}: Props) => {
       transition={transition1}
     >
       <div className="container mx-auto">
-          <div className="flex flex-col gap-8 pt-24 lg:pt-36 pb-12">
+          <div className="flex flex-col gap-8 mt-24 lg:mt-36 pb-12">
             <h1 className="h1 lg:text-[64px] px-4 text-center xl:text-left">
               Albums
             </h1>
