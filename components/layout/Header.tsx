@@ -4,10 +4,13 @@ import Socials from "../shared/Socials"
 import MobileNav from "./MobileNav"
 import { NAV_LINKS } from "@/constants"
 import Image from "next/image"
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
+    const specificPages = ['/', '/home'];
+    const isSpecificPage = specificPages.includes(usePathname());
   return (
-    <header className='fixed w-full px-[30px] lg:px-[100px] z-30 h-[80px] lg:h-[140px] flex items-center bg-white'>
+    <header className={`fixed w-full px-[30px] lg:px-[100px] z-30 h-[80px] lg:h-[140px] flex items-center ${isSpecificPage ? 'bg-transparent' : 'bg-white'}`}>
         <div className="flex flex-col lg:flex-row lg:items-center w-full justify-between">
             {/* Logo */}
             <Link href="/" className="max-w-[78px] pt-2">

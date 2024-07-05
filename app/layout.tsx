@@ -17,10 +17,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <head>
-        <title>Kappro's Portfolio</title>
+        <title>{"Kappro's Portfolio"}</title>
       </head>
       <body>
         <Header />
