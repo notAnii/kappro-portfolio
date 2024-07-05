@@ -49,7 +49,7 @@ const VideosPage = ({videosInfo}: Props) => {
             <Link href="/albums" className="btn mb-[30px] mx-auto xl:mx-0">View Albums</Link>
           </motion.div>
           {/* video section */}
-          <div className="w-full h-auto px-2 xl:px-0 xl:min-w-[800px] xl:h-[396px]">
+          <div className="flex space-x-1 gap-x-1 w-full h-auto px-2 xl:px-0 xl:min-w-[800px] xl:h-[396px]">
             <Swiper
               modules={[Navigation]}
               className="w-full h-full"

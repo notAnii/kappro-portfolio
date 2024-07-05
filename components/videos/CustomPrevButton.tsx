@@ -1,12 +1,12 @@
 import { useSwiper } from "swiper/react"
-import { TbCircleChevronLeft } from "react-icons/tb";
+import { FaChevronCircleLeft } from "react-icons/fa";
 
 const CustomPrevButton = () => {
   const swiper = useSwiper();
   return (
-    <div className="hidden lg:block">
+    <div className="text-white md:text-black">
       <button onClick={() => swiper.slidePrev()}>
-        <TbCircleChevronLeft size={37} />
+        <FaChevronCircleLeft size={28} />
       </button>
     </div>
   )

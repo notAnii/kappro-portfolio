@@ -1,12 +1,12 @@
 import { useSwiper } from "swiper/react"
-import { TbCircleChevronRight } from "react-icons/tb";
+import { FaChevronCircleRight } from "react-icons/fa";
 
 const CustomNextButton = () => {
   const swiper = useSwiper();
   return (
-    <div className="hidden lg:block">
+    <div className="text-white md:text-black">
       <button onClick={() => swiper.slideNext()}>
-        <TbCircleChevronRight size={37} />
+        <FaChevronCircleRight size={28} />
       </button>
     </div>
   )
