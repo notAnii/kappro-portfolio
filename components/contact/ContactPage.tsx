@@ -16,7 +16,7 @@ type Props = {
 
 const ContactPage = ({contactInfo}: Props) => {
 
-  const form = useRef(null);
+  const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -32,6 +32,7 @@ const ContactPage = ({contactInfo}: Props) => {
       .then(
         () => {
           console.log('SUCCESS!');
+          form.current!.reset();
         },
         (error) => {
           console.log('FAILED...', error);
