@@ -37,7 +37,7 @@ const SingleAlbum = ({ album }: Props) => {
           exit={{ x: '50%'}}
           transition={transition2}
         >
-          <div className="columns-1 sm:columns-4 gap-3 w-[1200px] mx-auto space-y-3 pb-28">
+          <div className="columns-1 sm:columns-4 gap-3 w-screen sm:w-[1200px] mx-auto space-y-3 pb-28">
             {album.images.map(image => (
                 <div className="break-avoid-inside" key={image._key}>
                   <Image
