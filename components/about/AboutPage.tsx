@@ -26,7 +26,7 @@ const AboutPage = ({aboutInfo}: Props) => {
                 lg:justify-center gap-x-24 text-center lg:text-left lg:pt-16">
                 {/* image*/}
                 <motion.div
-                    className="flex-1 max-h-[739px] order-2 lg:order-none overflow-hidden"
+                    className="hidden sm:block flex-1 max-h-[739px] order-2 lg:order-none overflow-hidden"
                     initial={{ y: '80%'}}
                     animate={{ y: 0 }}
                     exit={{ y: '80%' }}
