@@ -8,6 +8,7 @@ import { BiSolidPhoneCall } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
 import { FaInstagram } from "react-icons/fa";
 import Link from "next/link";
+import { toast } from 'react-hot-toast';
 
 
 type Props = {
@@ -31,11 +32,11 @@ const ContactPage = ({contactInfo}: Props) => {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          toast.success('Message sent successfully!');
           form.current!.reset();
         },
         (error) => {
-          console.log('FAILED...', error);
+          toast.error('Something went wrong. Please try again later.');
         },
       );
     }

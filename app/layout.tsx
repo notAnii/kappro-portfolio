@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Header from "@/components/layout/Header";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "Kappro Portfolio | Photographer & Film Maker",
@@ -25,6 +26,7 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
+        <Toaster position="top-center" />
         {children}
       </body>
     </html>
