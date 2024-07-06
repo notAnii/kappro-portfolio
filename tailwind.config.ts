@@ -24,7 +24,16 @@ const config: Config = {
         primary: '#0E1112',
         grey: '#484B4B',
         accent: '#EEF7F9',
-      }
+      },
+      height: {
+        'screen-dvh': '100dvh',
+        'screen-svh': '100svh',
+      },
+      width: {
+        'screen-dvw': '100dvw',
+        'screen-svw': '100svw',
+        
+      },
     },
   },
   plugins: [],

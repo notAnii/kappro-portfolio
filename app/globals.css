@@ -13,7 +13,11 @@
       @apply text-[54px] lg:text-[108px] font-primary font-bold capitalize leading-[120%] tracking-[-0.05em] mb-2;
     }
     .section {
-      @apply h-screen w-screen;
+      @apply h-screen w-screen; /* Optional, for full width */
+    }
+    .section {
+      height: 100dvh;
+      width: 100dvw;
     }
     .btn {
       @apply py-[18px] px-[50px] h-[66px] flex items-center justify-center text-base uppercase font-secondary font-semibold bg-primary text-white;
@@ -22,4 +26,5 @@
       line-height: 1.5;
       min-height: 1.5rem;
     }
+
   }
