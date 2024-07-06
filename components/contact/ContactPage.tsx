@@ -48,7 +48,7 @@ const ContactPage = ({contactInfo}: Props) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={transition1}
-      className="section overflow-y-hidden"
+      className="section overflow-y-scroll"
     >
       <div className="container mx-auto h-full">
         <div className="flex flex-col lg:flex-row h-full items-center
