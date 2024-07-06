@@ -18,7 +18,7 @@ const AboutPage = ({aboutInfo}: Props) => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={transition1}
-        className="section"
+        className="section overflow-y-scroll"
     >
         <div className="container mx-auto h-full relative">
             {/* text and image wrapper*/}
@@ -26,7 +26,7 @@ const AboutPage = ({aboutInfo}: Props) => {
                 lg:justify-center gap-x-24 text-center lg:text-left lg:pt-16">
                 {/* image*/}
                 <motion.div
-                    className="flex-1 max-h-[739px] order-2 lg:order-none overflow-hidden"
+                    className="flex-1 h-[739px] order-2 lg:order-none"
                     initial={{ y: '80%'}}
                     animate={{ y: 0 }}
                     exit={{ y: '80%' }}
@@ -37,6 +37,7 @@ const AboutPage = ({aboutInfo}: Props) => {
                         alt="About Image"
                         width={689}
                         height={851}
+                        className="object-cover object-top w-full h-full"
                     />
                 </motion.div>
 
